@@ -28,6 +28,7 @@ jobs:
       uses: snok/install-poetry@v1
     - name: Install dependencies
       run: |
+        poetry config virtualenvs.create false
         poetry install
     - name: Lint with flake8
       run: |
