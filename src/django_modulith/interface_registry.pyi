@@ -1,8 +1,8 @@
-from typing import Any, Callable, Set, ClassVar, List, TypeVar
+from typing import Callable, ClassVar, Set, TypeVar
 
-C = TypeVar('C')
-S = TypeVar('S')
-T = TypeVar('T')
+C = TypeVar("C")
+S = TypeVar("S")
+T = TypeVar("T")
 
 class InterfaceRegistry:
     _registered_interfaces: ClassVar[Set[str]]
