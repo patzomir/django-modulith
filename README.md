@@ -18,7 +18,7 @@ Add to your Django project's INSTALLED_APPS:
 ```python
 INSTALLED_APPS = [
     # ...
-    'modulith',
+    'django_modulith',
     # ...
 ]
 ```
