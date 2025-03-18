@@ -33,9 +33,9 @@ Update the importlinter configuration to include the new module
 2. Define module interfaces in `modulith.py`:
 ```python
 # modulith.py
-from django_modulith import interface_registry
+from django_modulith.interface_decorator import interface
 
-@interface_registry.interface
+@interface
 def get_user_profile(user_id: int) -> dict:
     # Implementation here
     pass
@@ -44,9 +44,9 @@ def get_user_profile(user_id: int) -> dict:
 3. Use module interfaces
 ```python
 # some_module.py
-from django_modulith import interface_registry
+from django_modulith.interface_registry import InterfaceRegistry
 
-user_profile = interface_registry.get_user_profile(user_id=1)
+user_profile = InterfaceRegistry.get_user_profile(user_id=1)
 ```
 
 ## Architecture Enforcement
