@@ -12,8 +12,8 @@
   "emeraldwalk.runonsave": {
     "commands": [
       {
-        "match": ".*\\.py$",
-        "cmd": "PYTHONPATH=${PYTHONPATH}:src/ python ${workspaceFolder}/tests/interface_generator.py"
+        "match": ".modulith.py$",
+        "cmd": "export PYTHONPATH=${PYTHONPATH}:${workspaceFolder}/src/; cd ${workspaceFolder}/tests/;  python manage.py generatestubs"
       }
     ]
   }
