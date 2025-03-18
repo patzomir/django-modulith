@@ -1,9 +1,9 @@
 [project]
 name = "django-modulith"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = [
-    {name = "Plamen Tarkalanov",email = "plamen.tarkalanov@dataops.live"}
+    {name = "Plamen Tarkalanov",email = "plamen.tarkalanov@gmail.com"}
 ]
 license = {text = "MIT"}
 readme = "README.md"
