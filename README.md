@@ -30,9 +30,25 @@ This will:
 Create a new module directory with proper structure
 Update the importlinter configuration to include the new module
 
-2. Define module interfaces
- 
-4. Use module interfaces
+2. Define module interfaces in `modulith.py`:
+```python
+# modulith.py
+from django_modulith import interface_registry
+
+@interface_registry.interface
+def get_user_profile(user_id: int) -> dict:
+    # Implementation here
+    pass
+```
+
+3. Use module interfaces
+```python
+# some_module.py
+from django_modulith import interface_registry
+
+user_profile = interface_registry.get_user_profile(user_id=1)
+```
+
 ## Architecture Enforcement
 The library helps enforce module boundaries through import linting:
 ```python
@@ -82,4 +98,4 @@ A stub file (interface_registry.pyi) is automatically generated to provide prope
 Contributions are welcome! Please check the contribution guidelines for more details.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
