@@ -1,0 +1,34 @@
+site_name: Django Modulith
+site_description: A toolkit for building modular Django applications
+repo_url: https://github.com/patzomir/django-modulith
+repo_name: django-modulith
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          load_external_modules: true
+          paths: [src, django_modulith]
+          options:
+            show_source: true
+            show_root_heading: true
+  - autorefs:
+      resolve_closest: false
+      
+
+# nav:
+#   - Home: index.md
+#   - API:
+#     - Interface Registry: api/interface_registry.md
+#     - Interface Decorator: api/interface_decorator.md
+#   - Contributing: contributing.md

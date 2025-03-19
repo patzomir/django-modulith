@@ -1,4 +1,4 @@
-# django-modulith
+# Djnago Modulith
 
 A toolkit for building modular, maintainable Django applications using the Modulith architectural pattern.
 
@@ -17,6 +17,7 @@ A Modulith is a monolithic application that is internally structured as a collec
 ```bash
 pip install django-modulith
 ```
+
 
 Add to your Django project's INSTALLED_APPS:
 ```python
